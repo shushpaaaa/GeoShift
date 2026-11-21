@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoShift — Logo Iterations (Transparent Background)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 2.5rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.dark { background: #0e1013; color: #eee; }
+  body.light { background: #f4f2ed; color: #1e2022; }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  }
+  h1 { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.5px; }
+  .subtitle { font-size: 0.85rem; color: #8a8275; margin-top: 4px; font-family: monospace; }
+  .toggle {
+    padding: 0.5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(25, 28, 34, 0.5);
+  }
+  .card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    min-height: 280px;
+    background-image: 
+      linear-gradient(45deg, rgba(128,128,128,0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(128,128,128,0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(128,128,128,0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(128,128,128,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+  .card-img img {
+    width: 220px;
+    height: 220px;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
+  }
+  .card-label {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-top: 1px solid rgba(128, 128, 128, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 23, 28, 0.9);
+  }
+  body.light .card-label { background: #f0ede6; }
+  .card-desc {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #9c9183;
+  }
+
+  .favicon-strip {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    background: rgba(20, 23, 28, 0.6);
+  }
+  .favicon-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-top: 1rem;
+  }
+  .favicon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .favicon-item span {
+    font-size: 11px;
+    font-family: monospace;
+    color: #8a8275;
+  }
+</style>
+</head>
+<body class="dark">
+  <div class="header">
+    <div>
+      <h1>GeoShift — Logo Iterations</h1>
+      <div class="subtitle">Checkerboard indicates pure transparent alpha (no chassis box, zero white edges)</div>
+    </div>
+    <button class="toggle" onclick="document.body.classList.toggle('light'); document.body.classList.toggle('dark');">Toggle Theme</button>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-img">
+        <img src="iterations/iteration-2.svg" alt="Iteration 2">
+      </div>
+      <div class="card-label">
+        <span>Iteration 2 (Recommended)</span>
+        <span class="card-desc">Signature Emerald & Milk Coffee • Transparent</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="iterations/iteration-3.svg" alt="Iteration 3">
+      </div>
+      <div class="card-label">
+        <span>Iteration 3</span>
+        <span class="card-desc">Classic Bone White & Milk Coffee • Transparent</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="favicon-strip">
+    <div style="font-weight: 600; font-size: 0.9rem; color: #4cc38a;">Legibility Test Strip (Iteration 2)</div>
+    <div class="favicon-row">
+      <div class="favicon-item">
+        <img src="iterations/iteration-2.svg" width="64" height="64">
+        <span>64px</span>
+      </div>
+      <div class="favicon-item">
+        <img src="iterations/iteration-2.svg" width="48" height="48">
+        <span>48px</span>
+      </div>
+      <div class="favicon-item">
+        <img src="iterations/iteration-2.svg" width="32" height="32">
+        <span>32px</span>
+      </div>
+      <div class="favicon-item">
+        <img src="iterations/iteration-2.svg" width="16" height="16">
+        <span>16px</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

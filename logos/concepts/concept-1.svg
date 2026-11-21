@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="100%" height="100%">
+  <rect width="1024" height="512" fill="#131518" rx="24"/>
+  
+  <!-- Subtle architectural grid markings -->
+  <g opacity="0.15" stroke="#F4F0EA" stroke-width="1">
+    <line x1="80" y1="256" x2="944" y2="256" stroke-dasharray="4 8"/>
+    <line x1="240" y1="80" x2="240" y2="432" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- ICON: The Orbital Meridian Shift -->
+  <g id="icon">
+    <!-- Outer primary meridian ring (Elephant bone) -->
+    <circle cx="240" cy="256" r="110" fill="none" stroke="#F4F0EA" stroke-width="6"/>
+    
+    <!-- Coordinate crosshair ticks -->
+    <line x1="240" y1="126" x2="240" y2="146" stroke="#F4F0EA" stroke-width="4" stroke-linecap="round"/>
+    <line x1="240" y1="366" x2="240" y2="386" stroke="#F4F0EA" stroke-width="4" stroke-linecap="round"/>
+    <line x1="110" y1="256" x2="130" y2="256" stroke="#F4F0EA" stroke-width="4" stroke-linecap="round"/>
+    <line x1="350" y1="256" x2="370" y2="256" stroke="#F4F0EA" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Shifted Meridian Arc (Light Coffee / Warm Taupe) -->
+    <path d="M 240 166 A 90 90 0 0 1 310 310" fill="none" stroke="#CBB8A3" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="310" cy="310" r="10" fill="#CBB8A3"/>
+    
+    <!-- Central native coordinate anchor -->
+    <circle cx="240" cy="256" r="16" fill="none" stroke="#8E8476" stroke-width="3"/>
+    <circle cx="240" cy="256" r="5" fill="#F4F0EA"/>
+    
+    <!-- Vector displacement line -->
+    <line x1="240" y1="256" x2="303" y2="304" stroke="#CBB8A3" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- WORDMARK: GeoShift -->
+  <g id="wordmark" transform="translate(430, 276)">
+    <text font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="76" letter-spacing="-1">
+      <tspan fill="#F4F0EA" font-weight="300">Geo</tspan><tspan fill="#CBB8A3" font-weight="700">Shift</tspan>
+    </text>
+  </g>
+
+  <!-- TAGLINE & METRICS -->
+  <g id="tagline" transform="translate(434, 322)">
+    <text font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="15" fill="#8E8476" letter-spacing="5" font-weight="500">
+      GPS TELEPORTATION INSTRUMENT
+    </text>
+    <line x1="0" y1="20" x2="430" y2="20" stroke="#252930" stroke-width="1.5"/>
+    <text x="0" y="44" font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="12" fill="#6B6256" letter-spacing="3">
+      LOC // 22.5914° N · 114.0100° E
+    </text>
+  </g>
+</svg>

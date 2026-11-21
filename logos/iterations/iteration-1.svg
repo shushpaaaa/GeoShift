@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background: Precision App Icon Chassis -->
+  <rect width="512" height="512" rx="112" fill="#131518"/>
+  <rect x="2" y="2" width="508" height="508" rx="110" fill="none" stroke="#252A32" stroke-width="2"/>
+
+  <!-- Subtle Navigation Reticle Grid -->
+  <g opacity="0.14" stroke="#F4F0EA" stroke-width="1.5">
+    <line x1="256" y1="48" x2="256" y2="464" stroke-dasharray="6 10"/>
+    <line x1="48" y1="256" x2="464" y2="256" stroke-dasharray="6 10"/>
+    <circle cx="256" cy="256" r="80" fill="none" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- ICON: The Orbital Meridian Shift -->
+  <g id="icon">
+    <!-- Primary Celestial Meridian Ring (Elephant Bone) -->
+    <circle cx="256" cy="256" r="150" fill="none" stroke="#F4F0EA" stroke-width="10"/>
+
+    <!-- Cardinal Coordinate Ticks -->
+    <line x1="256" y1="84" x2="256" y2="108" stroke="#F4F0EA" stroke-width="6" stroke-linecap="round"/>
+    <line x1="256" y1="404" x2="256" y2="428" stroke="#F4F0EA" stroke-width="6" stroke-linecap="round"/>
+    <line x1="84" y1="256" x2="108" y2="256" stroke="#F4F0EA" stroke-width="6" stroke-linecap="round"/>
+    <line x1="404" y1="256" x2="428" y2="256" stroke="#F4F0EA" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Shift Vector Ray (Displacement from Native Origin to Target Fix) -->
+    <line x1="256" y1="256" x2="346" y2="324" stroke="#CBB8A3" stroke-width="4" stroke-dasharray="6 6"/>
+
+    <!-- Shifted Meridian Arc (Light Milk Coffee) -->
+    <path d="M 256 136 A 120 120 0 0 1 352 328" fill="none" stroke="#CBB8A3" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- Target Waypoint Node (High-Contrast Milk Coffee + Bone Core) -->
+    <circle cx="352" cy="328" r="18" fill="#CBB8A3"/>
+    <circle cx="352" cy="328" r="7" fill="#131518"/>
+    <circle cx="352" cy="328" r="3" fill="#F4F0EA"/>
+
+    <!-- Native Location Center Anchor -->
+    <circle cx="256" cy="256" r="22" fill="#1A1D23" stroke="#8E8476" stroke-width="4"/>
+    <circle cx="256" cy="256" r="7" fill="#F4F0EA"/>
+  </g>
+
+  <!-- Corner Telemetry Monogram -->
+  <g id="tagline" opacity="0.6">
+    <text x="56" y="80" font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="14" fill="#CBB8A3" font-weight="600" letter-spacing="2">GS // 01</text>
+    <text x="360" y="448" font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="12" fill="#8E8476" letter-spacing="1">22.59°N</text>
+  </g>
+</svg>

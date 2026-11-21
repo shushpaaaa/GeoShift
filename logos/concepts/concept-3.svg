@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="100%" height="100%">
+  <rect width="1024" height="512" fill="#131518" rx="24"/>
+
+  <!-- ICON: The Reticle Dial -->
+  <g id="icon" transform="translate(240, 256)">
+    <!-- Outer Precision Compass Dial -->
+    <circle cx="0" cy="0" r="115" fill="none" stroke="#2B3038" stroke-width="2"/>
+    <circle cx="0" cy="0" r="95" fill="none" stroke="#F7F4EE" stroke-width="4"/>
+    
+    <!-- Precision Cardinal Marks -->
+    <circle cx="0" cy="-95" r="4" fill="#F7F4EE"/>
+    <circle cx="95" cy="0" r="4" fill="#F7F4EE"/>
+    <circle cx="0" cy="95" r="4" fill="#F7F4EE"/>
+    <circle cx="-95" cy="0" r="4" fill="#F7F4EE"/>
+
+    <!-- Native Center Anchor -->
+    <circle cx="-25" cy="-25" r="28" fill="none" stroke="#685E53" stroke-width="2.5" stroke-dasharray="3 3"/>
+    <circle cx="-25" cy="-25" r="6" fill="#A89B8D"/>
+
+    <!-- Shift Vector & Target Fix -->
+    <line x1="-25" y1="-25" x2="35" y2="35" stroke="#CEBEAB" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Shifted Target Ring (Light Coffee) -->
+    <circle cx="35" cy="35" r="32" fill="none" stroke="#CEBEAB" stroke-width="5"/>
+    <circle cx="35" cy="35" r="8" fill="#F7F4EE"/>
+    
+    <!-- Reticle Crosshair Ticks on target -->
+    <line x1="35" y1="-8" x2="35" y2="12" stroke="#CEBEAB" stroke-width="2.5"/>
+    <line x1="35" y1="58" x2="35" y2="78" stroke="#CEBEAB" stroke-width="2.5"/>
+    <line x1="-8" y1="35" x2="12" y2="35" stroke="#CEBEAB" stroke-width="2.5"/>
+    <line x1="58" y1="35" x2="78" y2="35" stroke="#CEBEAB" stroke-width="2.5"/>
+  </g>
+
+  <!-- WORDMARK: geo / shift -->
+  <g id="wordmark" transform="translate(440, 274)">
+    <text font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="82" letter-spacing="-2">
+      <tspan fill="#F7F4EE" font-weight="200">geo</tspan><tspan fill="#685E53" font-weight="200">·</tspan><tspan fill="#CEBEAB" font-weight="600">shift</tspan>
+    </text>
+  </g>
+
+  <!-- TECHNICAL METRIC SUBTEXT -->
+  <g id="tagline" transform="translate(444, 326)">
+    <text font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="14" fill="#96897A" letter-spacing="4" font-weight="500">
+      SYSTEM SATELLITE DISPLACEMENT
+    </text>
+    <text x="0" y="28" font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="12" fill="#585046" letter-spacing="3">
+      ACCURACY // 0.0M · STATUS // LOCKED
+    </text>
+  </g>
+</svg>

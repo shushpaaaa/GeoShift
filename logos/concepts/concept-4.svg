@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="100%" height="100%">
+  <rect width="1024" height="512" fill="#121417" rx="24"/>
+
+  <!-- ICON: The Vector Gate -->
+  <g id="icon" transform="translate(150, 156)">
+    <!-- Perimeter boundary (Geofence barrier) -->
+    <rect x="0" y="0" width="200" height="200" rx="44" fill="none" stroke="#282E38" stroke-width="3"/>
+    
+    <!-- Open Gate Breach arc (Elephant bone) -->
+    <path d="M 100 0 L 156 0 A 44 44 0 0 1 200 44 L 200 156 A 44 44 0 0 1 156 200 L 44 200 A 44 44 0 0 1 0 156 L 0 80" 
+          fill="none" stroke="#F6F3ED" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Shift Vector Ray (Coffee Latte) cutting across boundary -->
+    <line x1="-20" y1="20" x2="100" y2="100" stroke="#C5B49F" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Origin marker outside boundary -->
+    <circle cx="-20" cy="20" r="10" fill="#7F7365"/>
+
+    <!-- Destination Pin inside facility (Cream Coffee & Bone) -->
+    <circle cx="100" cy="100" r="28" fill="#1A1E24" stroke="#C5B49F" stroke-width="4"/>
+    <circle cx="100" cy="100" r="10" fill="#F6F3ED"/>
+
+    <!-- Radar echo rings inside gate -->
+    <circle cx="100" cy="100" r="54" fill="none" stroke="#C5B49F" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+  </g>
+
+  <!-- WORDMARK: GEO // SHIFT -->
+  <g id="wordmark" transform="translate(430, 266)">
+    <text font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="64" font-weight="700" letter-spacing="6">
+      <tspan fill="#F6F3ED">GEO</tspan>
+      <tspan fill="#7F7365" font-weight="300"> // </tspan>
+      <tspan fill="#C5B49F">SHIFT</tspan>
+    </text>
+  </g>
+
+  <!-- TECHNICAL SUBTEXT -->
+  <g id="tagline" transform="translate(434, 320)">
+    <text font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#A89C8C" letter-spacing="3" font-weight="400">
+      PORTABLE USB GEOFENCE BYPASS
+    </text>
+    <line x1="0" y1="22" x2="440" y2="22" stroke="#242830" stroke-width="1.5"/>
+    <text x="0" y="48" font-family="'SF Mono', 'Menlo', Monaco, monospace" font-size="12" fill="#6B6256" letter-spacing="4">
+      USB-MUX · DVT · ADB PROTOCOL
+    </text>
+  </g>
+</svg>

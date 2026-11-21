@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Transparent Background: No chassis, no bounding box, no white edges -->
+  <defs>
+    <!-- Soft shadow giving definition against white/light backgrounds -->
+    <filter id="meridian-shadow-dark" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <g id="icon" filter="url(#meridian-shadow-dark)">
+    <!-- Fine Navigation Reticle Grid -->
+    <g opacity="0.4" stroke="#8E8476" stroke-width="1.8">
+      <line x1="256" y1="110" x2="256" y2="402" stroke-dasharray="6 8"/>
+      <line x1="110" y1="256" x2="402" y2="256" stroke-dasharray="6 8"/>
+      <circle cx="256" cy="256" r="110" fill="none" stroke-dasharray="6 8"/>
+    </g>
+
+    <!-- Primary Celestial Meridian Ring (Elephant Bone White) -->
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#F4F0EA" stroke-width="14"/>
+
+    <!-- Cardinal Coordinate Ticks -->
+    <line x1="256" y1="50" x2="256" y2="82" stroke="#F4F0EA" stroke-width="8" stroke-linecap="round"/>
+    <line x1="256" y1="430" x2="256" y2="462" stroke="#F4F0EA" stroke-width="8" stroke-linecap="round"/>
+    <line x1="50" y1="256" x2="82" y2="256" stroke="#F4F0EA" stroke-width="8" stroke-linecap="round"/>
+    <line x1="430" y1="256" x2="462" y2="256" stroke="#F4F0EA" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Shift Vector Ray (Displacement from Native Origin to Target Fix) -->
+    <line x1="256" y1="256" x2="368" y2="338" stroke="#CBB8A3" stroke-width="5" stroke-dasharray="6 6"/>
+
+    <!-- Shifted Meridian Arc (Light Milk Coffee) -->
+    <path d="M 256 112 A 144 144 0 0 1 372 342" fill="none" stroke="#CBB8A3" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Target Waypoint Node -->
+    <circle cx="372" cy="342" r="22" fill="#CBB8A3"/>
+    <circle cx="372" cy="342" r="9" fill="#141416"/>
+    <circle cx="372" cy="342" r="4" fill="#4CC38A"/>
+
+    <!-- Native Location Center Anchor -->
+    <circle cx="256" cy="256" r="26" fill="#141416" stroke="#8E8476" stroke-width="5"/>
+    <circle cx="256" cy="256" r="8" fill="#F4F0EA"/>
+  </g>
+</svg>

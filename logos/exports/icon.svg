@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Transparent Background: No chassis, no bounding box, no white edges -->
+  <defs>
+    <!-- Multi-surface drop shadow for visibility on both dark and pure white backgrounds -->
+    <filter id="meridian-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g id="icon" filter="url(#meridian-shadow)">
+    <!-- Concentric Target Reticle (Dashed) -->
+    <circle cx="256" cy="256" r="110" fill="none" stroke="#4CC38A" stroke-width="2.5" stroke-dasharray="6 8" opacity="0.4"/>
+    
+    <!-- Primary Celestial Meridian Ring (Signature Emerald) -->
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#4CC38A" stroke-width="14"/>
+
+    <!-- Cardinal Coordinate Ticks -->
+    <line x1="256" y1="50" x2="256" y2="82" stroke="#4CC38A" stroke-width="8" stroke-linecap="round"/>
+    <line x1="256" y1="430" x2="256" y2="462" stroke="#4CC38A" stroke-width="8" stroke-linecap="round"/>
+    <line x1="50" y1="256" x2="82" y2="256" stroke="#4CC38A" stroke-width="8" stroke-linecap="round"/>
+    <line x1="430" y1="256" x2="462" y2="256" stroke="#4CC38A" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Fine Reticle Crosshairs -->
+    <line x1="256" y1="120" x2="256" y2="392" stroke="#4CC38A" stroke-width="2" stroke-dasharray="6 8" opacity="0.35"/>
+    <line x1="120" y1="256" x2="392" y2="256" stroke="#4CC38A" stroke-width="2" stroke-dasharray="6 8" opacity="0.35"/>
+
+    <!-- Shift Vector Ray (Displacement from Origin to Target Waypoint) -->
+    <line x1="256" y1="256" x2="368" y2="338" stroke="#CBB8A3" stroke-width="5" stroke-dasharray="6 6"/>
+
+    <!-- Shifted Meridian Arc (Warm Milk Coffee / Gold Accent) -->
+    <path d="M 256 112 A 144 144 0 0 1 372 342" fill="none" stroke="#CBB8A3" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Target Waypoint Node (Contrast Rings) -->
+    <circle cx="372" cy="342" r="22" fill="#CBB8A3"/>
+    <circle cx="372" cy="342" r="9" fill="#141416"/>
+    <circle cx="372" cy="342" r="4" fill="#4CC38A"/>
+
+    <!-- Native Coordinate Anchor -->
+    <circle cx="256" cy="256" r="26" fill="#141416" stroke="#4CC38A" stroke-width="5"/>
+    <circle cx="256" cy="256" r="8" fill="#4CC38A"/>
+  </g>
+</svg>

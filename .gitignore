@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.venv/
+.agents/
+
+# Build caches & large targets
+src-tauri/target/
+brag-output/
+brag-output-*/
+dist-ssr/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Logs
+logs/
+*.log
