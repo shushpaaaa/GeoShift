@@ -1,35 +1,52 @@
 # GeoShift
 
-A native desktop GPS simulation controller for iOS devices connected over USB, built in **Rust** (Tauri v2) and designed with the **unslop** craft principles.
+<p>
+  <a href="https://github.com/shushpaaaa/GeoShift/releases/tag/v1.0.0">
+    <img src="https://img.shields.io/badge/Release-v1.0.0-4f8ff7?style=flat&labelColor=0e1015" alt="Release v1.0.0" />
+  </a>
+  <img src="https://img.shields.io/badge/Shell-Rust_%2B_Tauri_v2-1b1f2a?style=flat&labelColor=0e1015" alt="Rust + Tauri v2" />
+  <img src="https://img.shields.io/badge/Transport-Apple_DVT_%2F_usbmuxd-1b1f2a?style=flat&labelColor=0e1015" alt="Apple DVT over usbmuxd" />
+  <img src="https://img.shields.io/badge/Platform-macOS_%26_Windows-1b1f2a?style=flat&labelColor=0e1015" alt="macOS and Windows" />
+</p>
+
+A native desktop GPS simulation controller for iOS devices connected over USB, built in **Rust (Tauri v2)** with an integrated Python DVT instrumentation bridge.
+
+---
+
+## Downloads (`v1.0.0`)
+
+| Platform | Package | Size | Download |
+| :--- | :--- | :--- | :--- |
+| **macOS (Universal)** | Apple Silicon & Intel `.dmg` | 4.5 MB | [GeoShift_1.0.0_universal.dmg](https://github.com/shushpaaaa/GeoShift/releases/download/v1.0.0/GeoShift_1.0.0_universal.dmg) |
+| **macOS (Apple Silicon)** | `aarch64` `.dmg` | 2.5 MB | [GeoShift_1.0.0_aarch64.dmg](https://github.com/shushpaaaa/GeoShift/releases/download/v1.0.0/GeoShift_1.0.0_aarch64.dmg) |
+| **macOS (Intel)** | `x64` `.dmg` | 2.7 MB | [GeoShift_1.0.0_x64.dmg](https://github.com/shushpaaaa/GeoShift/releases/download/v1.0.0/GeoShift_1.0.0_x64.dmg) |
+| **Windows (Installer)** | NSIS Setup `.exe` | 1.5 MB | [GeoShift-Setup-1.0.0.exe](https://github.com/shushpaaaa/GeoShift/releases/download/v1.0.0/GeoShift-Setup-1.0.0.exe) |
+| **Windows (Portable)** | Standalone `.zip` | 2.0 MB | [GeoShift-Windows-Portable.zip](https://github.com/shushpaaaa/GeoShift/releases/download/v1.0.0/GeoShift-Windows-Portable.zip) |
+
+All checksums and archives are published on the [v1.0.0 Release Page](https://github.com/shushpaaaa/GeoShift/releases/tag/v1.0.0).
 
 ---
 
 ## Capabilities
 
-* **System-wide GPS Override:** Spoofs coordinates across all iOS apps (Maps, Camera, Safari, QR attendance scanners).
-* **Instant Reversion:** One-click reset (`Restore Hardware GPS`) that immediately hands control back to true satellite/cell telemetry.
-* **Interactive Cartography:** High-precision OpenStreetMap Leaflet viewport with custom dark instrument styling and target reticle.
-* **Geocoding Search:** Direct address, landmark, or facility lookup via Nominatim.
-* **Live USB Auto-Detection:** Automatically monitors connection state, model name (e.g. *iPhone 11 Pro Max*), and iOS version.
-* **Non-Invasive:** Ephemeral in-memory Apple Developer Instrumentation override; no permanent system files modified and no jailbreak required.
+- **System-wide GPS Override** — Simulates coordinates across all iOS apps (Maps, Camera, Safari, location-aware clients).
+- **Instant Hardware Restoration** — One-click `Restore Hardware GPS` immediately clears the ephemeral override and returns to native satellite/cell lock.
+- **Interactive Cartography** — High-precision OpenStreetMap Leaflet viewport with dark instrument styling, target reticle, and Nominatim geocoding search.
+- **Live USB Auto-Detection** — Automatically tracks USB connection state, device model name, and iOS version.
+- **Non-Invasive** — Uses Apple's developer instrumentation services (`com.apple.dt.simulatelocation`) in memory; no jailbreak or persistent OS changes required.
 
 ---
 
-## Quick Start
+## Quick Start (From Source)
 
-### 1. iPhone Setup
-1. Plug your iPhone into your Mac using a Lightning-to-USB cable.
-2. Unlock your phone and tap **Trust This Computer** (enter your passcode).
-3. If on iOS 16 or newer: Ensure **Developer Mode** is turned on in:
-   `Settings > Privacy & Security > Developer Mode`
+### 1. iPhone Preparation
+1. Connect your iPhone over USB and tap **Trust This Computer**.
+2. On iOS 16+, enable **Developer Mode** under `Settings → Privacy & Security → Developer Mode`.
 
-### 2. Launch the Application
-Run:
+### 2. Run Locally
 ```bash
 ./start.sh
-```
-or:
-```bash
+# or
 npm start
 ```
 
@@ -37,6 +54,6 @@ npm start
 
 ## Architecture
 
-* **Desktop Shell:** Rust + Tauri v2 native macOS window (non-browser standalone app).
-* **Interface:** Unslop-compliant dark graphite instrument layout (`#0f0f10`, `#141415`, `#19191b`), 4px spacing scale, hairline borders, and tabular monospace readouts. Zero slop, zero glow gradients, zero emojis.
-* **iOS Backend:** Integrated `pymobiledevice3` bridge (`engine/controller.py`) executing Apple's `com.apple.dt.simulatelocation` and DVT location simulation services over `usbmuxd`.
+- **Desktop Shell:** Rust + Tauri v2 standalone native window.
+- **Interface:** Dark graphite instrument layout (`4px` grid, hairline borders, tabular coordinate readouts).
+- **iOS Backend:** Integrated `pymobiledevice3` bridge (`engine/controller.py`) executing `com.apple.dt.simulatelocation` and DVT location simulation over `usbmuxd`.
